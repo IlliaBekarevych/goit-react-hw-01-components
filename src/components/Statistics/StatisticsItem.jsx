@@ -1,5 +1,5 @@
 import i from './index.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -14,9 +14,9 @@ const StatisticItem = ({ label, percentage }) => (
   </li>
 );
 
-StatisticItem.propTypes = {
-  label: propTypes.string.isRequired,
-  percentage: propTypes.number.isRequired,
+StatisticItem.PropTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 export default StatisticItem;

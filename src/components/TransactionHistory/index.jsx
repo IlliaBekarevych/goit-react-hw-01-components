@@ -1,5 +1,5 @@
 import i from './index.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const TransactionHistory = ({ items }) => (
   <table className={i.transactionHistory}>
@@ -23,13 +23,13 @@ const TransactionHistory = ({ items }) => (
   </table>
 );
 
-TransactionHistory.propTypes = {
-  items: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string.isRequired,
-      type: propTypes.string.isRequired,
-      amount: propTypes.string.isRequired,
-      currency: propTypes.string.isRequired,
+TransactionHistory.PropTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };

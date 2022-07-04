@@ -1,6 +1,6 @@
 import StatisticItem from './StatisticsItem';
 import i from './index.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title, stats }) => (
   <section className={i.statistics}>
@@ -14,9 +14,11 @@ const Statistics = ({ title, stats }) => (
   </section>
 );
 
-Statistics.propTypes = {
-  title: propTypes.string,
-  stats: propTypes.arrayOf(propTypes.shape({ id: propTypes.string.isRequired })),
+Statistics.PropTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string.isRequired })
+  ),
 };
 
 export default Statistics;

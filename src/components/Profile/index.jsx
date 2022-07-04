@@ -1,7 +1,13 @@
 import i from './index.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => (
   <div className={i.profile}>
     <div className={i.description}>
       <img src={avatar} alt="User avatar" className={i.avatar} />
@@ -27,15 +33,15 @@ const Profile = ({ username, tag, location, avatar, stats: { followers, views, l
   </div>
 );
 
-Profile.propTypes = {
-  username: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
-  location: propTypes.string.isRequired,
-  avatar: propTypes.string.isRequired,
-  stats: propTypes.arrayOf({
-    followers: propTypes.number.isRequired,
-    views: propTypes.number.isRequired,
-    likes: propTypes.number.isRequired,
+Profile.PropTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
   }),
 };
 
