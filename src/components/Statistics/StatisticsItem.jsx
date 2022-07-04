@@ -14,7 +14,7 @@ const StatisticItem = ({ label, percentage }) => (
   </li>
 );
 
-StatisticItem.PropTypes = {
+StatisticItem.propTypes = {
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
 };

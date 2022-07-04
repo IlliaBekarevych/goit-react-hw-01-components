@@ -15,7 +15,7 @@ const FriendList = ({ friends }) => (
   </ul>
 );
 
-FriendList.PropTypes = {
+FriendList.propTypes = {
   id: PropTypes.number.isRequired,
 };
 
