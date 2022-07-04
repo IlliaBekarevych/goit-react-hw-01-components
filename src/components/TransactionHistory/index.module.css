@@ -1,0 +1,17 @@
+.transactionHistory{
+    box-shadow: 0 0 10px 3px gray;
+	border-radius: 5px;
+	border-collapse: collapse;
+	overflow: hidden;
+	margin-bottom: 30px;
+    width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.transactionHistory thead{
+    padding: 20px;
+}

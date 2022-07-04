@@ -1,4 +1,6 @@
 import i from './index.module.css';
+import propTypes from 'prop-types';
+
 const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
   <div className={i.profile}>
     <div className={i.description}>
@@ -24,5 +26,17 @@ const Profile = ({ username, tag, location, avatar, stats: { followers, views, l
     </ul>
   </div>
 );
+
+Profile.propTypes = {
+  username: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatar: propTypes.string.isRequired,
+  stats: propTypes.arrayOf({
+    followers: propTypes.number.isRequired,
+    views: propTypes.number.isRequired,
+    likes: propTypes.number.isRequired,
+  }),
+};
 
 export default Profile;
