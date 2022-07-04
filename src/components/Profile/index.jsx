@@ -5,9 +5,9 @@ const Profile = ({ username, tag, location, avatar, stats: { followers, views, l
   <div className={i.profile}>
     <div className={i.description}>
       <img src={avatar} alt="User avatar" className={i.avatar} />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
+      <p className={i.name}>{username}</p>
+      <p className={i.tag}>@{tag}</p>
+      <p className={i.location}>{location}</p>
     </div>
 
     <ul className={i.stats}>
