@@ -1,33 +1,36 @@
-.friendList{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-
+.friendList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
-.item{
-    width: 350px;
-    border: 2px solid silver;
-    border-color: black;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-.status {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin-left: 10px;
+.item {
+  width: 350px;
+  border: 2px solid silver;
+  border-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-color: #fff;
 }
 .statusRed {
-	background: red;
+  background: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .statusGreen {
-	background: green;
+  background: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
 }

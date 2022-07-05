@@ -1,23 +1,31 @@
 import StatisticItem from './StatisticsItem';
-import i from './index.module.css';
+import {
+  StatisticSection,
+  StatisticUl,
+  StatisticH2,
+} from './StstisticsItem.styled';
 import PropTypes from 'prop-types';
 
 const Statistics = ({ title, stats }) => (
-  <section className={i.statistics}>
-    {title && <h2 className={i.title}>{title}</h2>}
+  <StatisticSection>
+    {title && <StatisticH2>{title}</StatisticH2>}
 
-    <ul className={i.statList}>
+    <StatisticUl>
       {stats.map(({ id, label, percentage }) => (
         <StatisticItem key={id} label={label} percentage={percentage} />
       ))}
-    </ul>
-  </section>
+    </StatisticUl>
+  </StatisticSection>
 );
 
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.string.isRequired })
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
   ),
 };
 

@@ -1,5 +1,7 @@
 import i from './index.module.css';
 import PropTypes from 'prop-types';
+import ProfileDescription from './ProfileDescription';
+import ProfileStatList from './ProfileStatList';
 
 const Profile = ({
   username,
@@ -9,27 +11,13 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => (
   <div className={i.profile}>
-    <div className={i.description}>
-      <img src={avatar} alt="User avatar" className={i.avatar} />
-      <p className={i.name}>{username}</p>
-      <p className={i.tag}>@{tag}</p>
-      <p className={i.location}>{location}</p>
-    </div>
-
-    <ul className={i.stats}>
-      <li className={i.item}>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
-      </li>
-      <li className={i.item}>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
-      </li>
-      <li className={i.item}>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
-      </li>
-    </ul>
+    <ProfileDescription
+      username={username}
+      tag={tag}
+      location={location}
+      avatar={avatar}
+    />
+    <ProfileStatList followers={followers} views={views} likes={likes} />
   </div>
 );
 
@@ -38,7 +26,7 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf({
+  stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,

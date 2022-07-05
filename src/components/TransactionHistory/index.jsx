@@ -1,5 +1,6 @@
 import i from './index.module.css';
 import PropTypes from 'prop-types';
+import TransactionHistoryItem from './TransactionHistoryItem';
 
 const TransactionHistory = ({ items }) => (
   <table className={i.transactionHistory}>
@@ -13,11 +14,12 @@ const TransactionHistory = ({ items }) => (
 
     <tbody>
       {items.map(({ id, type, amount, currency }) => (
-        <tr key={id}>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
-        </tr>
+        <TransactionHistoryItem
+          key={id}
+          type={type}
+          amount={amount}
+          currency={currency}
+        />
       ))}
     </tbody>
   </table>
